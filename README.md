@@ -38,7 +38,7 @@ If so just update the URL and disable the script sections verifying the checksum
 1. Muse Score
    - The Flatpak variant did not detect Muse Sounds installed using Muse Hub for me, I use the [AppImage Variant](https://musescore.org/en/download)
 2. Muse Hub
-   - Right after Muse Hub finished downloading the fonts I noticed it had a memory leak `sudo systemctl status muse-hub.service` was showing it using about 12GB of memory. I restarted it using `sudo systemctl restart muse-hub.service` and the issue has not happend again since, the memory usage is around 50MB.
+   - Right after Muse Hub finished downloading the Muse Sounds I noticed it had a memory leak `sudo systemctl status muse-hub.service` was showing it using about 12GB of memory. I restarted it using `sudo systemctl restart muse-hub.service` and the issue has not happend again since, the memory usage is around 50MB.
    - The Muse Hub Systemd service runs as root, this is very bad for security.
    - The Muse Hub service starts at boot by default, you can disable it using `sudo systemctl disable muse-hub.service` and choose to start/stop manually if you like
      - start: `sudo systemctl start muse-hub.service`
